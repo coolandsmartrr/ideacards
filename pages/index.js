@@ -10,20 +10,9 @@ import styles from '../styles/Home.module.css'
 import { nouns } from './nouns'
 
 export default function Home() {
-
-  // console.log("Noun is: " + typeof(nouns))
-  // console.log(nouns)
-  // console.log(nouns[1])
-
   const [word1, setWord1] = React.useState("Hey");
   const [word2, setWord2] = React.useState("Yo");
   const [word3, setWord3] = React.useState("Sup");
-
-  function assignNewWords(){
-    setWord1("Voice")
-    setWord2("Dictionary")
-    setWord3("Electronics")
-  }
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -33,12 +22,12 @@ export default function Home() {
   }
 
   function generateWord() {
-    let numNouns = nouns.length - 1
+    let numNouns = nouns.length
     let randNum = getRandomInt(0, numNouns)
     return nouns[randNum]
   }
 
-  function randomWord() {
+  function assignNewWords() {
     setWord1(generateWord())
     setWord2(generateWord())
     setWord3(generateWord())
@@ -67,7 +56,7 @@ export default function Home() {
 
         <div style={{margin: "10px 0"}}></div>
 
-        <input className={styles.button} onClick={randomWord} type="button" value="Generate!" />
+        <input className={styles.button} onClick={assignNewWords} type="button" value="Generate!" />
       </main>
 
       <Memo></Memo>
