@@ -7,7 +7,7 @@ import Memo from './memo'
 
 // Assets
 import styles from '../styles/Home.module.css'
-import { nouns } from './nouns'
+import { nouns } from '../utils/nouns'
 
 export default function Home() {
   const [word1, setWord1] = React.useState("Hey");
@@ -63,7 +63,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
           Created by&nbsp;
-          <a target="_blank" href="https://twitter.com/coolandsmartrr">@coolandsmartrr</a>
+          <a target="_blank" rel="noreferrer" href="https://twitter.com/coolandsmartrr">@coolandsmartrr</a>
       </footer>
     </div>
   )
