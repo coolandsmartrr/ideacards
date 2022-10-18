@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React from 'react'
+import { useState, useEffect } from 'react'
 
 // Components
 import Card from './card'
@@ -10,9 +10,15 @@ import styles from '../styles/Home.module.css'
 import { nouns } from '../utils/nouns'
 
 export default function Home() {
-  const [word1, setWord1] = React.useState("Hey");
-  const [word2, setWord2] = React.useState("Yo");
-  const [word3, setWord3] = React.useState("Sup");
+  const [word1, setWord1] = useState();
+  const [word2, setWord2] = useState();
+  const [word3, setWord3] = useState();
+
+  useEffect(() => {
+    setWord1(generateWord())
+    setWord2(generateWord())
+    setWord3(generateWord())
+  }, [])
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
