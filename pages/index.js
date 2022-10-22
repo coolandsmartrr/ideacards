@@ -70,6 +70,8 @@ export default function Home() {
       <footer className={styles.footer}>
           Created by&nbsp;
           <a target="_blank" rel="noreferrer" href="https://twitter.com/coolandsmartrr">@coolandsmartrr</a>
+          &nbsp;| Source Code on:&nbsp;
+          <a href="_blank" rel="nonreferrer" href="https://github.com/coolandsmartrr/ideacards">GitHub</a>
       </footer>
     </div>
   )
