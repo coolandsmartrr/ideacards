@@ -63,9 +63,9 @@ export default function Home() {
         <div style={{margin: "10px 0"}}></div>
 
         <input className={styles.button} onClick={assignNewWords} type="button" value="Generate!" />
+        <Memo></Memo>
       </main>
 
-      <Memo></Memo>
 
       <footer className={styles.footer}>
           Created by&nbsp;
